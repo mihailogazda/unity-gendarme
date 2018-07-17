@@ -80,6 +80,7 @@ namespace Gendarme {
             this.save_report_button = new System.Windows.Forms.Button();
             this.results_title_label = new System.Windows.Forms.Label();
             this.report_subtitle_label = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.help_button = new System.Windows.Forms.Button();
             this.cancel_button = new System.Windows.Forms.Button();
             this.next_button = new System.Windows.Forms.Button();
@@ -95,6 +96,7 @@ namespace Gendarme {
             ((System.ComponentModel.ISupportInitialize)(this.options_limit_updown)).BeginInit();
             this.analyze_tab_page.SuspendLayout();
             this.results_tab_page.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             //
@@ -705,6 +707,16 @@ namespace Gendarme {
             this.report_subtitle_label.TabIndex = 0;
             this.report_subtitle_label.Text = "Gendarme has found {0} defects during analysis.";
             //
+            // pictureBox2
+            //
+            this.pictureBox2.Image = global::Gendarme.Properties.Resources.FGOL_LOGO;
+            this.pictureBox2.Location = new System.Drawing.Point(10, 175);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(123, 70);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 11;
+            this.pictureBox2.TabStop = false;
+            //
             // help_button
             //
             this.help_button.Location = new System.Drawing.Point(545, 411);
@@ -771,6 +783,7 @@ namespace Gendarme {
             this.AcceptButton = this.next_button;
             this.ClientSize = new System.Drawing.Size(624, 441);
             this.ControlBox = false;
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.back_button);
             this.Controls.Add(this.next_button);
@@ -799,6 +812,7 @@ namespace Gendarme {
             this.analyze_tab_page.PerformLayout();
             this.results_tab_page.ResumeLayout(false);
             this.results_tab_page.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -866,6 +880,7 @@ namespace Gendarme {
 		private System.Windows.Forms.LinkLabel bugzilla_linklabel;
         private System.Windows.Forms.Button btnSelectNone;
         private System.Windows.Forms.Button btnSelectAll;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
 
