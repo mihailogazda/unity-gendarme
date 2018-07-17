@@ -1,6 +1,8 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2036
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Rules", "Rules", "{7AECA932-F2A4-4B4B-8946-BAC2E13836ED}"
 	ProjectSection(SolutionItems) = preProject
 		rules\rules.xml = rules\rules.xml
@@ -91,11 +93,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gendarme", "console\gendarm
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gendarme.Framework", "framework\Gendarme.Framework.csproj", "{CD6818D5-B398-486C-B180-92A07B143AFD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mono.Cecil", "..\..\mcs\class\Mono.Cecil\Mono.Cecil.csproj", "{D8F63DFF-5230-43E4-9AB2-DA6E721A1FAE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mono.Cecil", "..\..\mcs\Mono.Cecil.csproj", "{D68133BD-1E63-496E-9EDE-4FBDBF77B486}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "swf-wizard-runner", "swf-wizard-runner\swf-wizard-runner.csproj", "{3C44DF79-3FEA-4F1D-8568-8744AD92E3F9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests.Rules.Design.Generic", "rules\Gendarme.Rules.Design.Generic\Test\Tests.Rules.Design.Generic.csproj", "{C3BDA065-4C29-48CA-907A-E35CE92F5F87}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.Rules.Maintainability", "rules\Unity.Rules.Maintainability\Unity.Rules.Maintainability.csproj", "{DEE05772-9951-48E4-B27A-2E671CECD331}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.Rules.Performance", "rules\Unity.Rules.Performance\Unity.Rules.Performance.csproj", "{09CEA6B9-ABF3-419F-801D-F2F0B6375899}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -243,10 +249,10 @@ Global
 		{CD6818D5-B398-486C-B180-92A07B143AFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CD6818D5-B398-486C-B180-92A07B143AFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CD6818D5-B398-486C-B180-92A07B143AFD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D8F63DFF-5230-43E4-9AB2-DA6E721A1FAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D8F63DFF-5230-43E4-9AB2-DA6E721A1FAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D8F63DFF-5230-43E4-9AB2-DA6E721A1FAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D8F63DFF-5230-43E4-9AB2-DA6E721A1FAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D68133BD-1E63-496E-9EDE-4FBDBF77B486}.Debug|Any CPU.ActiveCfg = net_4_0_Debug|Any CPU
+		{D68133BD-1E63-496E-9EDE-4FBDBF77B486}.Debug|Any CPU.Build.0 = net_4_0_Debug|Any CPU
+		{D68133BD-1E63-496E-9EDE-4FBDBF77B486}.Release|Any CPU.ActiveCfg = winphone_Release|Any CPU
+		{D68133BD-1E63-496E-9EDE-4FBDBF77B486}.Release|Any CPU.Build.0 = winphone_Release|Any CPU
 		{3C44DF79-3FEA-4F1D-8568-8744AD92E3F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3C44DF79-3FEA-4F1D-8568-8744AD92E3F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3C44DF79-3FEA-4F1D-8568-8744AD92E3F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -255,6 +261,14 @@ Global
 		{C3BDA065-4C29-48CA-907A-E35CE92F5F87}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C3BDA065-4C29-48CA-907A-E35CE92F5F87}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C3BDA065-4C29-48CA-907A-E35CE92F5F87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DEE05772-9951-48E4-B27A-2E671CECD331}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DEE05772-9951-48E4-B27A-2E671CECD331}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DEE05772-9951-48E4-B27A-2E671CECD331}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DEE05772-9951-48E4-B27A-2E671CECD331}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09CEA6B9-ABF3-419F-801D-F2F0B6375899}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09CEA6B9-ABF3-419F-801D-F2F0B6375899}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09CEA6B9-ABF3-419F-801D-F2F0B6375899}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09CEA6B9-ABF3-419F-801D-F2F0B6375899}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -293,8 +307,13 @@ Global
 		{BC57A292-B4FC-415F-BF9A-714A5E62E0E1} = {E83F7555-F98B-48D9-8CD6-1E46895F276D}
 		{069148AF-86AB-4EE3-BFB9-429AE722461F} = {E83F7555-F98B-48D9-8CD6-1E46895F276D}
 		{A2F3E904-8D4E-4C18-A0B9-B2BCBD3A0537} = {E83F7555-F98B-48D9-8CD6-1E46895F276D}
+		{D68133BD-1E63-496E-9EDE-4FBDBF77B486} = {10772645-2837-44B1-9CFA-51A0A5CAC635}
 		{C3BDA065-4C29-48CA-907A-E35CE92F5F87} = {E83F7555-F98B-48D9-8CD6-1E46895F276D}
-		{D8F63DFF-5230-43E4-9AB2-DA6E721A1FAE} = {10772645-2837-44B1-9CFA-51A0A5CAC635}
+		{DEE05772-9951-48E4-B27A-2E671CECD331} = {7AECA932-F2A4-4B4B-8946-BAC2E13836ED}
+		{09CEA6B9-ABF3-419F-801D-F2F0B6375899} = {7AECA932-F2A4-4B4B-8946-BAC2E13836ED}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FC0500D0-58C6-4A6C-BB70-263A58E9C976}
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		name = gendarme

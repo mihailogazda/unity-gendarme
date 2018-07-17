@@ -1,4 +1,4 @@
-// 
+//
 // Unit tests for CustomAttributeRocks
 //
 // Authors:
@@ -34,6 +34,7 @@ using Mono.Cecil;
 using Mono.Collections.Generic;
 using NUnit.Framework;
 
+
 namespace Test.Framework.Rocks {
 
 	[TestFixture]
@@ -41,7 +42,7 @@ namespace Test.Framework.Rocks {
 
 		private AssemblyDefinition assembly;
 
-		[TestFixtureSetUp]
+		[OneTimeSetUp]
 		public void FixtureSetUp ()
 		{
 			string unit = Assembly.GetExecutingAssembly ().Location;
@@ -49,7 +50,7 @@ namespace Test.Framework.Rocks {
 		}
 
 		[Test]
-		[ExpectedException (typeof (ArgumentNullException))]
+		[Microsoft.VisualStudio.TestTools.UnitTesting.ExpectedException (typeof (ArgumentNullException))]
 		public void HasAttribute_Namespace_Null ()
 		{
 			TypeDefinition type = assembly.MainModule.GetType ("Test.Framework.Rocks.CustomAttributeRocksTest");
@@ -57,22 +58,22 @@ namespace Test.Framework.Rocks {
 		}
 
 		[Test]
-		[ExpectedException (typeof (ArgumentNullException))]
+		[Microsoft.VisualStudio.TestTools.UnitTesting.ExpectedException (typeof (ArgumentNullException))]
 		public void HasAttribute_Name_Null ()
 		{
 			TypeDefinition type = assembly.MainModule.GetType ("Test.Framework.Rocks.CustomAttributeRocksTest");
 			type.HasAttribute ("a", null);
 		}
-		
+
 		[Test]
 		public void HasAttribute ()
 		{
 			TypeDefinition type = null;
-			Assert.IsFalse (type.HasAttribute ("NUnit.Framework", "TestFixtureAttribute"), "null-type");
+            Assert.IsFalse (type.HasAttribute ("NUnit.Framework", "TestFixtureAttribute"), "null-type");
 
 			type = assembly.MainModule.GetType ("Test.Framework.Rocks.CustomAttributeRocksTest");
-			Assert.IsTrue (type.HasAttribute ("NUnit.Framework", "TestFixtureAttribute"), "true");
-			Assert.IsFalse (type.HasAttribute ("NUnit.Framework", "TestAttribute"), "false");
+            Assert.IsTrue (type.HasAttribute ("NUnit.Framework", "TestFixtureAttribute"), "true");
+            Assert.IsFalse (type.HasAttribute ("NUnit.Framework", "TestAttribute"), "false");
 		}
 	}
 }

@@ -84,7 +84,7 @@ namespace Test.Rules.Naming {
 
 		AssemblyDefinition assembly;
 
-		[TestFixtureSetUp]
+		[OneTimeSetUp]
 		public void FixtureSetUp ()
 		{
 			string unit = Assembly.GetExecutingAssembly ().Location;
@@ -100,7 +100,7 @@ namespace Test.Rules.Naming {
 		}
 
 		[Test]
-		[ExpectedException (typeof (ArgumentOutOfRangeException))]
+		[Microsoft.VisualStudio.TestTools.UnitTesting.ExpectedException (typeof (ArgumentOutOfRangeException))]
 		public void Min ()
 		{
 			Rule.MaxDepth = Int32.MinValue;

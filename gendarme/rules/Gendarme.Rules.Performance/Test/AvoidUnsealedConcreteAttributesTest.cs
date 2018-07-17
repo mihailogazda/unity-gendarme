@@ -1,4 +1,4 @@
-// 
+//
 // Unit tests for AvoidUnsealedConcreteAttributesRule
 //
 // Authors:
@@ -54,12 +54,12 @@ namespace Test.Rules.Performance {
 	[TestFixture]
 	public class AvoidUnsealedConcreteAttributesTest : TypeRuleTestFixture<AvoidUnsealedConcreteAttributesRule> {
 
-		[TestFixtureSetUp]
+		[OneTimeSetUp]
 		public void SetUp ()
 		{
 			Runner.Engines.Subscribe ("Gendarme.Framework.Engines.SuppressMessageEngine");
 		}
-		
+
 		[Test]
 		public void TestAbstractAttribute ()
 		{

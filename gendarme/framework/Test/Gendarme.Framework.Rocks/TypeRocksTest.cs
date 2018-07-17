@@ -1,4 +1,4 @@
-// 
+//
 // Unit tests for TypeRocks
 //
 // Authors:
@@ -124,7 +124,7 @@ namespace Test.Framework.Rocks {
 		private AssemblyDefinition assembly;
 		private TypeDefinition type;
 
-		[TestFixtureSetUp]
+		[OneTimeSetUp]
 		public void FixtureSetUp ()
 		{
 			string unit = System.Reflection.Assembly.GetExecutingAssembly ().Location;
@@ -178,14 +178,14 @@ namespace Test.Framework.Rocks {
 		}
 
 		[Test]
-		[ExpectedException (typeof (ArgumentNullException))]
+		[Microsoft.VisualStudio.TestTools.UnitTesting.ExpectedException (typeof (ArgumentNullException))]
 		public void HasAttribute_Namespace_Null ()
 		{
 			GetType (String.Empty).HasAttribute (null, "a");
 		}
 
 		[Test]
-		[ExpectedException (typeof (ArgumentNullException))]
+		[Microsoft.VisualStudio.TestTools.UnitTesting.ExpectedException (typeof (ArgumentNullException))]
 		public void HasAttribute_Name_Null ()
 		{
 			GetType (String.Empty).HasAttribute ("a", null);
@@ -210,14 +210,14 @@ namespace Test.Framework.Rocks {
 		}
 
 		[Test]
-		[ExpectedException (typeof (ArgumentNullException))]
+		[Microsoft.VisualStudio.TestTools.UnitTesting.ExpectedException (typeof (ArgumentNullException))]
 		public void Implements_Namespace_Null ()
 		{
 			GetType (String.Empty).Implements (null, "a");
 		}
 
 		[Test]
-		[ExpectedException (typeof (ArgumentNullException))]
+		[Microsoft.VisualStudio.TestTools.UnitTesting.ExpectedException (typeof (ArgumentNullException))]
 		public void Implements_Name_Null ()
 		{
 			GetType (String.Empty).Implements ("a", null);
@@ -235,14 +235,14 @@ namespace Test.Framework.Rocks {
 		}
 
 		[Test]
-		[ExpectedException (typeof (ArgumentNullException))]
+		[Microsoft.VisualStudio.TestTools.UnitTesting.ExpectedException (typeof (ArgumentNullException))]
 		public void Inherits_Namespace_Null ()
 		{
 			GetType (String.Empty).Inherits (null, "a");
 		}
 
 		[Test]
-		[ExpectedException (typeof (ArgumentNullException))]
+		[Microsoft.VisualStudio.TestTools.UnitTesting.ExpectedException (typeof (ArgumentNullException))]
 		public void Inherits_Name_Null ()
 		{
 			GetType (String.Empty).Inherits ("a", null);
@@ -382,7 +382,7 @@ namespace Test.Framework.Rocks {
 			TypeDefinition type = assembly.MainModule.GetType (name);
 
 			Assert.IsTrue (type.IsNamed ("Test.Framework.Rocks.PublicType/NestedPublicType/NestedNestedPublicType"));
-			
+
 			Assert.IsTrue (type.IsNamed ("Test.Framework.Rocks", "PublicType/NestedPublicType/NestedNestedPublicType"));
 		}
 

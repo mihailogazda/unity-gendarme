@@ -1,4 +1,4 @@
-// 
+//
 // Unit tests for UseSTAThreadAttributeOnSWFEntryPointsTest
 //
 // Authors:
@@ -76,7 +76,7 @@ namespace Test.Rules.Ui {
 		private TestRunner runner;
 		private AssemblyDefinition assembly;
 
-		[TestFixtureSetUp]
+		[OneTimeSetUp]
 		public void FixtureSetUp ()
 		{
 			string unit = System.Reflection.Assembly.GetExecutingAssembly ().Location;

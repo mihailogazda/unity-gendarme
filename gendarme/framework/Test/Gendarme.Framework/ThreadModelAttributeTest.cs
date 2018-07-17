@@ -1,4 +1,4 @@
-// 
+//
 // Unit tests for ThreadModelAttribute
 //
 // Authors:
@@ -97,7 +97,7 @@ namespace Test.Framework {
 		}
 
 		[Test]
-		[ExpectedException (typeof (ArgumentException))]
+		[Microsoft.VisualStudio.TestTools.UnitTesting.ExpectedException (typeof (ArgumentException))]
 		public void Invalid ()
 		{
 			new ThreadModelAttribute ((ThreadModel) Int32.MinValue);

@@ -1,4 +1,4 @@
-// 
+//
 // Unit tests for MethodRocks
 //
 // Authors:
@@ -87,7 +87,7 @@ namespace Test.Framework.Rocks {
 
 		private AssemblyDefinition assembly;
 
-		[TestFixtureSetUp]
+		[OneTimeSetUp]
 		public void FixtureSetUp ()
 		{
 			string unit = Assembly.GetExecutingAssembly ().Location;
@@ -111,7 +111,7 @@ namespace Test.Framework.Rocks {
 		}
 
 		[Test]
-		[ExpectedException (typeof (ArgumentNullException))]
+		[Microsoft.VisualStudio.TestTools.UnitTesting.ExpectedException (typeof (ArgumentNullException))]
 		public void HasAttribute_Namespace_Null ()
 		{
 			MethodDefinition method = GetMethod ("FixtureSetUp");
@@ -119,7 +119,7 @@ namespace Test.Framework.Rocks {
 		}
 
 		[Test]
-		[ExpectedException (typeof (ArgumentNullException))]
+		[Microsoft.VisualStudio.TestTools.UnitTesting.ExpectedException (typeof (ArgumentNullException))]
 		public void HasAttribute_Name_Null ()
 		{
 			MethodDefinition method = GetMethod ("FixtureSetUp");
@@ -130,8 +130,8 @@ namespace Test.Framework.Rocks {
 		public void HasAttribute ()
 		{
 			MethodDefinition method = GetMethod ("FixtureSetUp");
-			Assert.IsTrue (method.HasAttribute ("NUnit.Framework", "TestFixtureSetUpAttribute"), "NUnit.Framework.TestFixtureSetUpAttribute");
-			Assert.IsFalse (method.HasAttribute ("NUnit.Framework", "TestFixtureSetUp"), "NUnit.Framework.TestFixtureSetUp");
+			Assert.IsTrue (method.HasAttribute ("NUnit.Framework", "OneTimeSetUpAttribute"), "NUnit.Framework.OneTimeSetUpAttribute");
+			Assert.IsFalse (method.HasAttribute ("NUnit.Framework", "OneTimeSetUp"), "NUnit.Framework.OneTimeSetUp");
 		}
 
 		[Test]

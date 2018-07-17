@@ -1,4 +1,4 @@
-// 
+//
 // Unit tests for FieldRocks
 //
 // Authors:
@@ -54,7 +54,7 @@ namespace Test.Framework.Rocks {
 
 		private TypeDefinition type;
 
-		[TestFixtureSetUp]
+		[OneTimeSetUp]
 		public void FixtureSetUp ()
 		{
 			string unit = Assembly.GetExecutingAssembly ().Location;
@@ -73,14 +73,14 @@ namespace Test.Framework.Rocks {
 		}
 
 		[Test]
-		[ExpectedException (typeof (ArgumentNullException))]
+		[Microsoft.VisualStudio.TestTools.UnitTesting.ExpectedException (typeof (ArgumentNullException))]
 		public void HasAttribute_Namespace_Null ()
 		{
 			GetField ("assembly").HasAttribute (null, "a");
 		}
 
 		[Test]
-		[ExpectedException (typeof (ArgumentNullException))]
+		[Microsoft.VisualStudio.TestTools.UnitTesting.ExpectedException (typeof (ArgumentNullException))]
 		public void HasAttribute_Name_Null ()
 		{
 			GetField ("assembly").HasAttribute ("a", null);

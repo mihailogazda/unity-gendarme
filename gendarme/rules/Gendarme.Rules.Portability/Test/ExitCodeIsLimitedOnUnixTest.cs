@@ -1,4 +1,4 @@
-// 
+//
 // Unit tests for ExitCodeIsLimitedOnUnixRule
 //
 // Authors:
@@ -135,7 +135,7 @@ namespace Test.Rules.Portability {
 		public void SetUnsureExitCode ()
 		{
 			Environment.ExitCode = 3;
-			Environment.ExitCode = new Random ().Next (1024); // unsure			
+			Environment.ExitCode = new Random ().Next (1024); // unsure
 			Environment.ExitCode = 96;
 		}
 	}
@@ -173,7 +173,7 @@ namespace Test.Rules.Portability {
 		public void ExitWithUnsureExitCode ()
 		{
 			Environment.Exit (3);
-			Environment.Exit (new Random ().Next (1024)); // unsure			
+			Environment.Exit (new Random ().Next (1024)); // unsure
 			Environment.Exit (96);
 		}
 	}
@@ -189,7 +189,7 @@ namespace Test.Rules.Portability {
 		private TypeDefinition envSetExitCodeTester;
 		private TypeDefinition envExitTester;
 
-		[TestFixtureSetUp]
+		[OneTimeSetUp]
 		public void FixtureSetUp ()
 		{
 			string unit = System.Reflection.Assembly.GetExecutingAssembly ().Location;

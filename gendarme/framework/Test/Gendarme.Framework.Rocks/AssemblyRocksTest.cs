@@ -1,4 +1,4 @@
-// 
+//
 // Unit tests for AssemblyRocks
 //
 // Authors:
@@ -33,6 +33,7 @@ using Gendarme.Framework.Rocks;
 using Mono.Cecil;
 using NUnit.Framework;
 
+
 namespace Test.Framework.Rocks {
 
 	[TestFixture]
@@ -40,7 +41,7 @@ namespace Test.Framework.Rocks {
 
 		private AssemblyDefinition assembly;
 
-		[TestFixtureSetUp]
+		[OneTimeSetUp]
 		public void FixtureSetUp ()
 		{
 			string unit = Assembly.GetExecutingAssembly ().Location;
@@ -48,14 +49,14 @@ namespace Test.Framework.Rocks {
 		}
 
 		[Test]
-		[ExpectedException (typeof (ArgumentNullException))]
+		[Microsoft.VisualStudio.TestTools.UnitTesting.ExpectedException(typeof (ArgumentNullException))]
 		public void HasAttribute_Namespace_Null ()
 		{
 			assembly.HasAttribute (null, "a");
 		}
 
 		[Test]
-		[ExpectedException (typeof (ArgumentNullException))]
+		[Microsoft.VisualStudio.TestTools.UnitTesting.ExpectedException (typeof (ArgumentNullException))]
 		public void HasAttribute_Name_Null ()
 		{
 			assembly.HasAttribute ("a", null);
@@ -65,7 +66,7 @@ namespace Test.Framework.Rocks {
 		public void HasAttribute ()
 		{
 			Assert.IsTrue (assembly.HasAttribute ("System.Runtime.CompilerServices", "RuntimeCompatibilityAttribute"), "System.Runtime.CompilerServices.RuntimeCompatibilityAttribute");
-			Assert.IsFalse (assembly.HasAttribute ("NUnit.Framework", "TestFixtureAttribute"), "TestFixtureAttribute");
+            Assert.IsFalse (assembly.HasAttribute ("NUnit.Framework", "TestFixtureAttribute"), "TestFixtureAttribute");
 		}
 	}
 }
